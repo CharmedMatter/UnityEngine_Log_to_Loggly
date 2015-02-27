@@ -9,15 +9,13 @@ using System.Collections;
 
 public class LogOutputHandler : MonoBehaviour {
 
-	//Create a string to store log level in
-	string level = "";
-	
-
 	//Register the HandleLog function on scene start to fire on debug.log events 
 	void Awake(){
 		Application.RegisterLogCallback(HandleLog);
 	} 
 	
+	//Create a string to store log level in
+	string level = "";
 	
 	//Capture debug.log output, send logs to Loggly
 	public void HandleLog(string logString, string stackTrace, LogType type) {
