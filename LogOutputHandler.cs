@@ -29,7 +29,7 @@ public class LogOutputHandler : MonoBehaviour {
 		loggingForm.AddField("Message", logString);
 		loggingForm.AddField("Stack_Trace", stackTrace);
 		
-		//Add any game Device MetaData to  
+        	//Add any game Device MetaData that would be useful to finding issues later 
 		loggingForm.AddField("Device_Model", SystemInfo.deviceModel);
 		
 		//Send WWW Form to Loggly, replace TOKEN with your unique ID from Loggly
