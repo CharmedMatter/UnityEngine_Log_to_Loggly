@@ -32,7 +32,7 @@ public class LogOutputHandler : MonoBehaviour {
 		//Add any game Device MetaData to  
 		loggingForm.AddField("Device_Model", SystemInfo.deviceModel);
 		
-		//Send WWW Form to Loggly
-		var sendLog = new WWW("http://logs-01.loggly.com/inputs/3daf6441-06c4-41bc-955a-72c2585542c6/tag/http/", loggingForm);
+		//Send WWW Form to Loggly, replace TOKEN with your unique ID from Loggly
+		var sendLog = new WWW("http://logs-01.loggly.com/inputs/TOKEN/tag/http/", loggingForm);
 	}
 }
